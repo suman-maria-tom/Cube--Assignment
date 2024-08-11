@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #f2efe5;
+  text-align: center;
+  padding: 1px;
+  font-size: 1rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  height: calc(100vh - 40px);
+}
+
+.customer-list {
+  width: 30%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #f1f8e8;
+  padding: 0px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.customer-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #f2efe5;
+  cursor: pointer;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1.5em;
+  max-height: 4.5em;
+  min-height: 100px;
+  text-overflow: ellipsis;
+}
+
+.customer-card.selected {
+  background-color: #b4b4b8;
+}
+
+.customer-details {
+  width: 70%;
+  height: calc(100vh - 40px);
+  padding: 20px; /* Increase padding for better spacing */
+  background-color: #e3e1d9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  box-sizing: border-box; /* Include padding in width calculation */
+  padding-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
